@@ -45,8 +45,11 @@ public class Identifier {
 		//하지만 사용을 권장하지는 않습니다.
 		int 숫자 = 10;
 		String 名 = "홍길동";
-		System.out.println(숫자);
 		System.out.println(名);
+		System.out.println(숫자);
+		
+		
+		
 		
 				
 		
