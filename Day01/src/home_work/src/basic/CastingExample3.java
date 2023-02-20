@@ -14,7 +14,6 @@ public class CastingExample3 {
 		
 		int intResult = c + i;
 		char charResult = (char) (c + i);
-		
 		System.out.println(intResult);
 		System.out.println(charResult);
 	
