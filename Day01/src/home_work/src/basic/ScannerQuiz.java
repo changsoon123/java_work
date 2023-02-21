@@ -6,6 +6,7 @@ public class ScannerQuiz {
 
 	public static void main(String[] args) {
 		
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("이름:");
 		String name = sc.next();
@@ -22,6 +23,7 @@ public class ScannerQuiz {
 		System.out.println(age1);
 		sc.close();
 		
+		System.out.printf("이름: %s\n나이: %d세\n출생년도: %d년\n",);
 		
 	}
 
