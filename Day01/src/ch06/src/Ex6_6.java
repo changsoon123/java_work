@@ -14,5 +14,5 @@ class Ex6_6 {
 	static void change(int i) {  // �⺻�� �Ű�����
 		i = 1000;
 		System.out.println("change() : x = " + i);
-	}
+	} 
 }
