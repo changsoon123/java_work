@@ -11,8 +11,8 @@ class Ex6_6 {
 		System.out.println("main() : x = " + d.x);
 	}
 
-	static void change(int x) {  // ±âº»Çü ¸Å°³º¯¼ö
-		x = 1000;
-		System.out.println("change() : x = " + x);
+	static void change(int i) {  // ï¿½âº»ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½
+		i = 1000;
+		System.out.println("change() : x = " + i);
 	}
 }
