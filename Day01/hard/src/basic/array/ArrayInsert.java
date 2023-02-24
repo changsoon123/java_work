@@ -8,6 +8,7 @@ public class ArrayInsert {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		
 		String[] names = new String[6];
 		
 		/* 자바에서는 문자열 동등 비교 시 '==' 연산자를 사용할 수 없다.
