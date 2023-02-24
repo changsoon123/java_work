@@ -5,14 +5,14 @@ class Data_1 {
 class Data_2 {
 	int value;
 
-	Data_2(int x) {   // ¸Å°³º¯¼ö°¡ ÀÖ´Â »ý¼ºÀÚ.
-		value = x;
+	Data_2() {   // ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+		value = 10;
 	}
 }
 
 class Ex6_11 {
 	public static void main(String[] args) {
 		Data_1 d1 = new Data_1();
-		Data_2 d2 = new Data_2(); // compile error¹ß»ý
+		Data_2 d2 = new Data_2(); // compile errorï¿½ß»ï¿½
 	}
 }
