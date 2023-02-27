@@ -1,12 +1,14 @@
-package basic;
+package basic.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class test12 {
+public class ArrayInsertQuiz {
 
 	public static void main(String[] args) {
 		
-
+		
+		
 		/*
         1. String 배열을 생성하세요. (foods)
         크기는 넉넉하게 50개로 지정하겠습니다.
@@ -56,7 +58,6 @@ public class test12 {
 		}
 		
 		
-		int tmp = 0;
 		
 		for(String sol:foods) {
 			if(sol == null) {
@@ -67,10 +68,6 @@ public class test12 {
 		}
 		
 		sc.close();
-		
-		
-		
-		
 	}
 
 }
