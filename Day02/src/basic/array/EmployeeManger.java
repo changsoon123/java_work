@@ -21,7 +21,7 @@ public class EmployeeManger {
 		
 		sop:while(true) {
 			System.out.println("\n========= 사원 관리 프로그램 ==========");
-			System.out.printf(" count 값: %d\n",count);
+			System.out.printf(" 총 사원수 : %d\n",count);
 			
 			System.out.println("\n==================================");
 			System.out.println("#1. 사원 정보 신규 등록");
@@ -47,7 +47,7 @@ public class EmployeeManger {
 							System.out.println("사번이 중복되었습니다. 다시입력해주세요");
 							i--;
 							break;
-						}else if (j==99 && !(inputNum.equals(userNums[j]))) {
+						}else if (j==99) {
 							userNums[i] = inputNum;
 							System.out.print("신규 이름을 입력해주세요 : ");
 							String inputName = sc.next();
@@ -86,7 +86,7 @@ public class EmployeeManger {
 					System.out.printf("사번 : %s\n",userNums[i]);
 					System.out.printf("이름 : %s\n",names[i]);
 					System.out.printf("나이 : %d\n",ages[i]);
-					System.out.printf("부서 : %s\n",deps[i]);
+					System.out.printf("부서 : %s\n\n",deps[i]);
 				}
 				} else {
 					
@@ -107,7 +107,7 @@ public class EmployeeManger {
 					System.out.printf("나이 : %d\n",ages[i]);
 					System.out.printf("부서 : %s\n",deps[i]);
 						break;
-						} else if(i==99 && !(soo.equals(userNums[i]))) {
+						} else if(i==99) {
 							System.out.println("조회하신 사원의 정보가 없습니다");
 							break sol;
 						} else if(soo.equals("0")) {
@@ -136,23 +136,26 @@ public class EmployeeManger {
 								System.out.println("변경할 나이를 입력해주세요. ");
 								int soo3 = sc.nextInt();
 								ages[i] = soo3;
-								System.out.printf("사원:%d, 나이:%d, 이름:%d, 부서:%d로 변경됬습니다. ",userNums[i],names[i],ages[i],deps[i]);
+								System.out.printf("사원:%s, 나이:%d, 이름:%s, 부서:%s로 변경됬습니다. ",userNums[i],ages[i],names[i],deps[i]);
 								break;
 								
 							} else if(soo2.equals("2")) {
 								System.out.println("변경할 부서를 입력해주세요. ");
 								String soo4 = sc.next();
 								deps[i] = soo4;
-								System.out.printf("사원:%d, 나이:%d, 이름:%d, 부서:%d로 변경됬습니다. ",userNums[i],names[i],ages[i],deps[i]);
+								System.out.printf("사원:%s, 나이:%d, 이름:%s, 부서:%s로 변경됬습니다. ",userNums[i],ages[i],names[i],deps[i]);
 								break;
 								
 							}	
 							 else if(soo2.equals("3")) {
 								 System.out.println("나갑니다. ");
 								 break;
-							 } 
+							 } else {
+								 System.out.println("잘못 입력했습니다.");
+								 break;
+							 }
 						}	 
-						 else if(i==99 && !(soo1.equals(userNums[i]))) {
+						 else if(i==99) {
 							System.out.println("존재하는 사번이 없습니다. ");
 							break soi;
 							
@@ -160,6 +163,9 @@ public class EmployeeManger {
 						
 						else if(soo1.equals("0")) {
 							break soi;
+						}
+						else {
+							break;
 						}
 					}
 				
@@ -181,11 +187,11 @@ public class EmployeeManger {
 					String sool = sc.next();
 					if(sool.equals("Y") || sool.equals("y")) {
 						for(int j=i;j<100;j++) {
-							if(j==99 && !(userNums[j]==null)) {
+							if(j==99) {
 								
 								userNums[99]=null;
 								names[99]=null;
-								ages[99]=(Integer) null;
+								ages[99]=0;
 								deps[99]=null;
 								count--;
 								break hoho;
@@ -195,18 +201,18 @@ public class EmployeeManger {
 					names[j]=names[j+1];
 					ages[j]=ages[j+1];
 					deps[j]=deps[j+1];
-					if(j==98 && userNums[j]==null) {
-					count--;
-					break;
-					}
+//					if(j==98 && userNums[j]==null) {
+//					count--;
+//					break;
+//					}
 						}
 					} else {
 						break;
 					}
 				
-				} else if(i==99 && !(ssc.equals(userNums[i]))) {
+				} else if(i==99) {
 					System.out.println("존재하는 사번이 없습니다. ");
-					break ;
+					break hoho;
 					
 				}
 				
@@ -223,6 +229,13 @@ public class EmployeeManger {
 			
 			}
 			
+			else if(menu == 6) {
+				System.out.println("프로그램을 종료합니다");
+				sc.close();
+				break sop;
+			} else {
+				System.out.println("메뉴를 잘못 입력하셨습니다.");
+			}
 			
 		} //end while true
 		
