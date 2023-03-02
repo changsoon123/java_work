@@ -62,6 +62,7 @@ public class RussianRulette1 {
 				System.out.printf("\n빵!!!\n[%s]사망...\n",players[startIdx]);
 				bullet--;
 				playerNum--;
+				
 				bulletPos[realBulletPos] = false; //총알이 소모되었으니 false로 변경
 				//지금 죽은 사람 기준으로 뒤에 있는 값을 한칸씩 땡기는 작업.
 				for(int i=startIdx; i<players.length-1;i++) {
