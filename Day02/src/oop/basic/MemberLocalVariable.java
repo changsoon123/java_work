@@ -2,9 +2,22 @@ package oop.basic;
 
 public class MemberLocalVariable {
 
+	int a; //멤버 변수,필드
+
+	void printNumber(int c) { //매개 변수,지역 변수
+		int b =1; //지역변수
+		System.out.println("멤버변수 a: "+ a);
+		System.out.println("지역변수 b: "+ b);
+		System.out.println("매개변수 c: "+ c);
+	}
+	
 	public static void main(String[] args) {
 		
-		/*
+		
+		MemberLocalVariable m = new MemberLocalVariable();
+		m.printNumber(4);
+		
+		/*   
 		 # 멤버 변수(field, class member variable)
 		 1. 클래스 블록에 선언된 변수를 의미합니다.
 		 2. 메모리의 heap 영역에 저장되며, 값을 초기화하지 않아도
