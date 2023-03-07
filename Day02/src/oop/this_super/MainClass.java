@@ -3,7 +3,7 @@ package oop.this_super;
 public class MainClass {
 
 	public static void main(String[] args) {
-
+		
 		Player p1 = new Player();
 		p1.name = "전사1";
 		System.out.println("p1의 주소값: " + p1);
@@ -25,9 +25,11 @@ public class MainClass {
 		Warrior w1 = new Warrior("바보")	;
 		w1.charactorinfo();
 		System.out.println("-----------------------");
-
+		
 		Mage m1 = new Mage();
 		m1.charactorinfo();
+		
+		w1.attack(m1);
 		
 	}
 
