@@ -40,6 +40,20 @@ public class MainClass {
 //		t1.rearLeft = new Tire();
 //		t1.rearRight = new Tire();
 //		
+		new Sonata2();
+//		Car sisi2 = new Sonata2();
+		Car soso = new Sonata();
+		
+		System.out.println(new Sonata());
+		System.out.println(soso);
+		Sonata sisi = (Sonata) soso;
+		System.out.println(sisi);
+//		Sonata2 sisi3 = (Sonata2) sisi;
+//		System.out.println(sisi3);
+	
+		
+		
+		
 		System.out.println("-------------------------");
 		
 		Driver kim = new Driver();
@@ -49,6 +63,12 @@ public class MainClass {
 		
 		Car c = kim.buyCar("테슬라");
 		Tesla t = (Tesla) c;
+		
+		/*  객체에 대한 구분이 필요함.
+		 *  println에서 나오는 kim.buyCar("테슬라")가 값이
+		 * 
+		 */
+		System.out.println(kim.buyCar("테슬라"));
 		System.out.println(c);
 		System.out.println(t);
 		
