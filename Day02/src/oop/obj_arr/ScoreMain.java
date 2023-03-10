@@ -1,5 +1,7 @@
 package oop.obj_arr;
 
+import java.lang.annotation.AnnotationTypeMismatchException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ScoreMain {
@@ -23,24 +25,82 @@ public class ScoreMain {
          모두 null로 가득 차 있습니다. (null.scoreInfo() -> 에러)
         */
 		
+		/*
+		 * 
+		 * 
+Person[] p = new Person[3];
 		
 		
+		for(int i=0;i<p.length;i++) {
+			
+			System.out.println("이름을 입력해주세요. ");
+			String so = sc.next();
+			System.out.println("나이를 입력해주세요. ");
+			int si = sc.nextInt();
+			System.out.println("성별을 입력해주세요. ");
+			String su = sc.next();
+			
+			p[i] = new Person(so,si,su);
+			
+			
+		} */
+		
+		
+		Score ss2= new Score();
+		Score[] ss1= new Score[100];
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {
+		s1: while(true) {
 			
+			s2: for(int i=0;i<ss1.length;i++) {
+		System.out.println("이름을 입력해주세요.그만을 치면 그만둡니다. ");
+		try {
+		String aa0 = sc.next();
+		if(aa0.equals("그만")) {
+			break s2;
+		}
+		
 		System.out.println("국어 점수를 입력해주세요. ");
+		
 		int aa1 = sc.nextInt();
+		
 		System.out.println("영어 점수를 입력해주세요. ");
 		int aa2 = sc.nextInt();
 		System.out.println("수학 점수를 입력해주세요. ");
 		int aa3 = sc.nextInt();
 		
-		Score[] ss1= new Score[100];
-		for(int i=0;i<ss1.length;i++) {
+		
+		
+		ss1[i] = new Score();
+		ss1[i].setName(aa0);
+		ss1[i].setA(aa1);
+		ss1[i].setB(aa2);
+		ss1[i].setC(aa3);
+		ss1[i].setResult();
+		ss1[i].setAvr();
 			
+			
+		}catch(InputMismatchException e) {
+			System.out.println("당신 때문에 망했습니다. ");
+			break s1;
 		}
-	
+			}
+			
+			for(int i=0;i<ss1.length;i++) {
+				try {
+			       
+					ss1[i].scoreInfo();
+			     
+				} catch(NullPointerException e) {
+					System.out.println("");
+					break s1;
+				} finally {
+					
+					
+				}
+			}
+			
 	}
-
+		sc.close();
+	}
 }

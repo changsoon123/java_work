@@ -1,6 +1,6 @@
 package oop.obj_arr;
 
-public class Score extends ScoreMain{
+public class Score {
 
 	/*
     - 이름, 국어, 영어, 수학, 총점, 평균(double)을
@@ -21,14 +21,28 @@ public class Score extends ScoreMain{
 	private int result;
 	private double avr;
 	
-	public void scoreInfo(ScoreMain sc) {
+	Score(){
 		
-		System.out.println("이름: " + this.name);
-		System.out.println("국어 점수: " + this.a);
-		System.out.println("영어 점수: " + this.b);
-		System.out.println("수학 점수: " + this.c);
-		System.out.println("총점: " + this.result);
-		System.out.println("평균: " + this.avr);
+	}
+	
+	
+//	Score(String name,int a,int b, int c){
+//		this.name = name;
+//		this.a = a;
+//		this.b = b;
+//		this.c = c;
+//		this.result = a+b+c;
+//		this.avr = result/3.0;
+//	}
+	
+	public void scoreInfo() {
+		
+		System.out.println("이름: " + getName());
+		System.out.println("국어 점수: " + getA());
+		System.out.println("영어 점수: " + getB());
+		System.out.println("수학 점수: " + getC());
+		System.out.println("총점: " + getResult());
+		System.out.println("평균: " + getAvr());
 		
 	}
 
@@ -68,16 +82,18 @@ public class Score extends ScoreMain{
 		return result;
 	}
 
-	public void setResult(int result) {
-		this.result = result;
+	public void setResult() {
+		this.result=this.a + this.b + this.c;
+//		this.result = result;
 	}
 
 	public double getAvr() {
 		return avr;
 	}
 
-	public void setAvr(double avr) {
-		this.avr = avr;
+	public void setAvr() {
+		this.avr =this.result/3.0;
+//		this.avr = avr;
 	}
 	
 	
