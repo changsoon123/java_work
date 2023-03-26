@@ -1,15 +1,17 @@
 package test;
 
-import java.text.DecimalFormat;
+import java.util.*;
+import java.text.*;
 
-public class test1 {
-
+class test1 {
 	public static void main(String[] args) {
+		DateFormat df  = new SimpleDateFormat("yyyy년 MM월 dd일");
+		DateFormat df2 = new SimpleDateFormat("yyyy/MM/dd");
 
-		double number = 1234567.89;
-		DecimalFormat df = new DecimalFormat("#.#E0");
-		String result = df.format(number);
-		System.out.println(result);
-	}
-
+		try {
+			Date d = df.parse("2019년 11월 23일");
+			System.out.println(d);
+			System.out.println(df2.format(d));
+		} catch(Exception e) {}
+	} // main
 }
